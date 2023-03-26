@@ -6,7 +6,9 @@ defineProps(['job']);
 </script>
 
 <template>
-  <h1 class="text-3xl font-bold underline">{{ job.company}}</h1>
+  <div>
+    <img :src="job.logo" alt="Company Log">
+  </div>
 
   <div class="flex">
     <Job :job="job"/>
