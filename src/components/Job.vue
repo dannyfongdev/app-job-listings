@@ -1,3 +1,7 @@
+<script setup>
+defineProps(['job'])
+</script>
+
 <template>
   <div>
     <div>
@@ -14,6 +18,3 @@
   </div>
 </template>
 
-<script setup>
-defineProps(['job'])
-</script>
