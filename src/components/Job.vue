@@ -1,16 +1,24 @@
 <template>
-  <div class="flex w-[325px] flex-col">
+  <div class="flex w-[325px] flex-col md:w-full md:flex-row md:justify-between">
     <div class="">
-      <div class="flex items-center gap-2 my-3">
-        <div class="font-bold mr-3 text-primary1">{{ job.company }}</div>
-        <div v-if="job.new" class="text-sm px-3 pt-[3px] rounded-2xl bg-primary1 text-white">
+      <div class="my-3 flex items-center gap-2">
+        <div class="mr-3 font-bold text-primary1">{{ job.company }}</div>
+        <div
+          v-if="job.new"
+          class="rounded-2xl bg-primary1 px-3 pt-[3px] text-sm text-white"
+        >
           NEW!
         </div>
-        <div v-if="job.featured" class="text-sm px-3 pt-[3px] rounded-2xl bg-black text-white">FEATURED</div>
+        <div
+          v-if="job.featured"
+          class="rounded-2xl bg-black px-3 pt-[3px] text-sm text-white"
+        >
+          FEATURED
+        </div>
       </div>
-      <div class="font-bold pb-2">{{ job.position }}</div>
+      <div class="pb-2 font-bold">{{ job.position }}</div>
       <div
-        class="mb-4 flex w-full gap-2 border-b border-neutral3 pb-2 text-neutral3"
+        class="mb-4 flex w-full gap-2 border-b border-neutral3 pb-2 text-neutral3 md:border-none"
       >
         <div>{{ job.postedAt }}</div>
         &middot;
