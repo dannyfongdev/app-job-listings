@@ -4,7 +4,12 @@
       class="h-[156px] bg-[url('/images/bg-header-mobile.svg')] md:bg-[url('/images/bg-header-desktop.svg')]"
     ></div>
     <div class="bg-neutral1 p-6 md:mb-6">
-      <Listing v-for="job in jobs" :key="job.id" :job="job"></Listing>
+      <Listing
+        v-for="job in jobs"
+        :key="job.id"
+        :job="job"
+        @filter="handleFilter"
+      ></Listing>
     </div>
   </main>
 </template>
@@ -12,4 +17,8 @@
 <script setup>
 import Listing from "./components/Listing.vue";
 import jobs from "./data.json";
+
+function handleFilter(key, value) {
+  console.log(key, value);
+}
 </script>

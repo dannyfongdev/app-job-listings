@@ -6,7 +6,7 @@
   <div
     class="mx-auto flex rounded-md bg-white p-6 shadow-lg md:max-w-[1110px] md:pl-36"
   >
-    <Job :job="job" />
+    <Job :job="job" @filter="handleFilter" />
   </div>
 </template>
 
@@ -18,4 +18,9 @@ import Job from "./Job.vue";
 defineProps({
   job: Object,
 });
+
+const emit = defineEmits(["filter"]);
+function handleFilter(key, value) {
+  emit("filter", key, value);
+}
 </script>

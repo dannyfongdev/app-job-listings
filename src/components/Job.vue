@@ -32,6 +32,7 @@
       :level="job.level"
       :languages="job.languages"
       :tools="job.tools"
+      @filter="handleFilter"
     />
   </div>
 </template>
@@ -42,4 +43,9 @@ import Tags from "./Tags.vue";
 const props = defineProps({
   job: Object,
 });
+
+const emit = defineEmits(["filter"]);
+function handleFilter(key, value) {
+  emit("filter", key, value);
+}
 </script>
