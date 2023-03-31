@@ -27,24 +27,19 @@
         <div>{{ job.location }}</div>
       </div>
     </div>
-    <Tags :tags="tags" />
+    <Tags
+      :role="job.role"
+      :level="job.level"
+      :languages="job.languages"
+      :tools="job.tools"
+    />
   </div>
 </template>
 
 <script setup>
-import { computed } from "vue";
 import Tags from "./Tags.vue";
 
 const props = defineProps({
   job: Object,
-});
-
-const tags = computed(() => {
-  const arr = [];
-  arr.push(props.job.role);
-  arr.push(props.job.level);
-  arr.push(...props.job.languages);
-  arr.push(...props.job.tools);
-  return arr;
 });
 </script>
