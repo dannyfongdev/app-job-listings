@@ -3,6 +3,15 @@
     <div
       class="h-[156px] bg-[url('/images/bg-header-mobile.svg')] md:bg-[url('/images/bg-header-desktop.svg')]"
     ></div>
+
+    <Filter
+      :tools="filteredTools"
+      :languages="filteredLanguages"
+      :level="filteredLevel"
+      :role="filteredRole"
+      @clear="handleClear"
+    />
+
     <div class="bg-neutral1 p-6 md:mb-6">
       <Listing
         v-for="job in filteredJobs"
@@ -16,6 +25,7 @@
 
 <script setup>
 import { ref, computed } from "vue";
+import Filter from "./components/Filter.vue";
 import Listing from "./components/Listing.vue";
 import jobs from "./data.json";
 
@@ -75,4 +85,32 @@ const filteredJobs = computed(() => {
   });
   return newJobs;
 });
+
+// clear all filters
+function handleClear(key, value) {
+  // console.log("clear", key, value);
+  switch (key) {
+    case "role":
+      filteredRole.value = "";
+      break;
+    case "level":
+      filteredLevel.value = "";
+      break;
+    case "language":
+      filteredLanguages.value = filteredLanguages.value.filter((language) => {
+        return language !== value;
+      });
+      break;
+    case "tool":
+      filteredTools.value = filteredTools.value.filter((tool) => {
+        return tool !== value;
+      });
+      break;
+    case "all":
+      filteredRole.value = "";
+      filteredLevel.value = "";
+      filteredLanguages.value = [];
+      filteredTools.value = [];
+  }
+}
 </script>
