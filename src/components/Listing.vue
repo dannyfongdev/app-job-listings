@@ -1,10 +1,6 @@
 <template>
-  <div class="mx-6 -mb-6 w-12 md:-mb-32 md:w-24">
-    <img :src="job.logo" alt="Company Log" />
-  </div>
-
   <div
-    class="mx-auto flex rounded-md bg-white p-6 shadow-lg md:max-w-[1110px] md:pl-36"
+    class="mx-auto mb-10 flex rounded-md bg-white p-6 shadow-lg md:mb-5 md:max-w-[1110px]"
   >
     <Job :job="job" @filter="handleFilter" />
   </div>
@@ -12,7 +8,7 @@
 
 <script setup>
 // @todo logo has position issues
-// @todo y spacing needed between Linstings
+// @todo y spacing needed between Listings
 import Job from "./Job.vue";
 
 defineProps({
