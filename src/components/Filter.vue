@@ -41,6 +41,8 @@
 </template>
 
 <script setup>
+// @todo write CSS for this component
+
 import { computed } from "vue";
 
 const CROSS = "&#128473"; // cross aka x mark

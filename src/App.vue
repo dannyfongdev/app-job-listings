@@ -24,6 +24,8 @@
 </template>
 
 <script setup>
+// @todo need spacing above Listing
+
 import { ref, computed } from "vue";
 import Filter from "./components/Filter.vue";
 import Listing from "./components/Listing.vue";
