@@ -29,8 +29,6 @@ import Filter from "./components/Filter.vue";
 import Listing from "./components/Listing.vue";
 import jobs from "./data.json";
 
-// @todo need to create the filter list component and a clear function
-
 // each time a tag is clicked, we add the filter to the list of filters
 // only allow one role or level otherwise automatically no results
 // only allow each tool/lanaguage once

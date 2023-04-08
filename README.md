@@ -1,29 +1,27 @@
-# job-listings
+# Frontend Mentor - Job listings with filtering solution
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a solution to the [Job listings with filtering challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Recommended IDE Setup
+## Table of contents
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+- [My process](#my-process)
+  - [Built with](#built-with)
 
-## Customize configuration
+## Overview
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+### The challenge
 
-## Project Setup
+Users should be able to:
 
-```sh
-npm install
-```
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Filter job listings based on the categories
 
-### Compile and Hot-Reload for Development
+## My process
 
-```sh
-npm run dev
-```
+### Built with
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- Vue
+- Tailwind

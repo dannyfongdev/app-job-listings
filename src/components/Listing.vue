@@ -11,8 +11,6 @@
 </template>
 
 <script setup>
-// @todo logo has position issues
-// @todo y spacing needed between Listings
 import Job from "./Job.vue";
 
 defineProps({
