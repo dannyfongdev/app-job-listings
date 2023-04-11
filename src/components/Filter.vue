@@ -1,7 +1,7 @@
 <template>
-  <div v-if="hasFilters" class="bg-neutral1 p-6 shadow-lg">
+  <div v-if="hasFilters" class="mx-6 -mt-12 rounded-md">
     <div
-      class="mx-auto flex items-center justify-between rounded-md bg-white p-6 md:max-w-[1110px]"
+      class="mx-auto flex items-center justify-between rounded-md bg-white p-6 shadow-lg md:max-w-[1110px]"
     >
       <ul class="flex flex-wrap gap-4">
         <li v-if="role" class="flex items-center rounded-l-md bg-neutral1">
@@ -54,7 +54,7 @@
         </li>
       </ul>
       <div
-        class="inline-block cursor-pointer rounded-md py-1.5 px-3 font-bold text-neutral3 hover:text-primary1 hover:underline md:h-8"
+        class="cursor-pointer rounded-md py-1.5 font-bold text-neutral3 hover:text-primary1 hover:underline md:h-8"
         @click="emit('clear', 'all')"
       >
         Clear
